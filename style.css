@@ -1,0 +1,59 @@
+body{
+    background-color: #34003E;
+}
+
+
+.flixnavigation{
+    float: right;
+    padding: 1%;
+}
+
+.flixbrand{
+    color: #ff020a;
+    font-size: 4em;
+    padding: .5em;
+}
+
+#posterCarousel{
+    align-content: center;
+    height: 25em;
+    width: 60em;
+}
+.item .active, img {
+    width: 60%;
+    height: 25%;
+    margin: auto;
+}
+.box{
+    align-self: center;
+    align-content: center;
+    border: solid;
+    border-color: #9A5293;
+}
+
+label, p{
+    color: white;
+}
+
+form {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    padding: 5px;
+    /*border: 1px solid #8B0070;*/
+    background: ;
+
+}
+/*input{
+    padding: 10%;
+    margin:2em;
+}*/
+
+/*
+section{
+    margin: 15em
+}*/
