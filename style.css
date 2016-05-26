@@ -2,18 +2,33 @@ body{
     background-color: #34003E;
 }
 
-
 .flixnavigation{
     float: right;
     padding: 1%;
 }
 
 .flixbrand{
-    color: #ff020a;
+    color: white; #ff020a;
     font-size: 4em;
-    padding: .5em;
+    padding: .2em;
 }
 
+.flixbrand:hover{
+    color: #ff5d73;
+    font-size: 4em;
+    padding: .2em;
+}
+
+/*.flixbrand:after {
+    position: absolute;
+    left: 10;
+    top: 50%;
+    height: 2px;
+    background: #c00;
+    content: "";
+    width: 20%;
+    display: block;
+}*/
 #posterCarousel{
     align-content: center;
     height: 25em;
@@ -28,32 +43,112 @@ body{
     align-self: center;
     align-content: center;
     border: solid;
-    border-color: #9A5293;
+    border-color: #fa91f3;
 }
 
 label, p{
     color: white;
 }
 
-form {
+.loginform {
     position:fixed;
     top: 50%;
     left: 50%;
-    width:30em;
-    height:18em;
+    width:32em;
+    height:17em;
     margin-top: -9em; /*set to a negative number 1/2 of your height*/
     margin-left: -15em; /*set to a negative number 1/2 of your width*/
-    padding: 5px;
+    padding: 2em;
     /*border: 1px solid #8B0070;*/
-    background: ;
+    background: transparent;
+    background-color: rgba(168, 52, 160, 0.56);
+    border-radius: 25px;
+}
+
+.signupform {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:32em;
+    height:24em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    padding: 2em;
+    /*border: 1px solid #8B0070;*/
+    background: transparent;
+    background-color: rgba(168, 52, 160, 0.56);
+    border-radius: 25px;
+}
+
+.navbar, .navbar-dark{
+    padding-top: .5em;
+    margin: auto;
+}
+
+.catalogbody{
+    background-color: #B9BEC1;
+    min-height: 40em;
+    min-width: auto;
+    border-radius: 5px;
+}
+.searchform{
+    background-color: rgba(168, 52, 160, 0.56);
+    min-width: 70em;
+    margin: 0em;
+    border-radius: 5px;
+    border-color: black;
 
 }
-/*input{
-    padding: 10%;
-    margin:2em;
-}*/
+#search{
+    margin: .5em;
+    min-width: 40em;
+}
+.searchbar{
+    border-radius: 25px;
+}
 
-/*
-section{
-    margin: 15em
-}*/
+#genere, #login, #signup, #register{
+    background-color: #34003E;
+    color: white;
+}
+
+.pages, .pagination{
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+}
+
+hr{
+    border-color: #34003E;
+    margin-top: 0em;
+    border-width: 0.2em;
+}
+.poster{
+    height: 15em;
+    width: 13em;
+    min-height: 15em;
+    min-width: 13em;
+    border-radius: 5px;
+    margin: .2em;
+}
+
+.poster:hover{
+    border-radius: 35px;
+    border-color: #ff5d73;
+    border-style: double;
+}
+li>a:hover{
+    font-weight: bolder;
+}
+.play{
+    color: #c145b4;
+}
+.btn-logout{
+    color: white;
+    background-color: #c145b4;
+}
+.flixlabel{
+    color: #34003E;
+    font-size: smaller;
+    font-weight: bold;
+}

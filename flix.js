@@ -1,7 +1,9 @@
 /**
  * Created by Anirban Roy on 5/24/2016.
  */
-
-$("signup").click(function () {
-   window.location.href='/signup.html';
-});
+$(document).ready(function() {
+    $('#signup').click(function () {
+        //alert("hi");
+        document.location.href = "signup.html";
+    });
+})

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Anirban Roy">
+    <title>Movieflix: Free Netflix!</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="flix.js"></script>
+    <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body>
+            <div class="container-fluid">
+                <nav class="navbar navbar-dark">
+                    <a class="navbar-brand flixbrand" href="#">Movie Flix</a>
+                    <div class="flixnavigation">
+                        <ul class="nav navbar-nav ">
+                            <li class="nav-link"><p>Welcome user! &nbsp;</p></li>
+                            <li class="nav-link">
+                                <button type="submit" class="btn btn-logout">Logout</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="catalogbody clearfix">
+                    <!--<div class="searchbar">-->
+                            <form class="col-sm-12 form-inline searchform">
+                                <fieldset class="form-group">
+                                    <div class="dropdown">
+                                        <button id="genere" class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                            All Generes <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-header">Genere</li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Drama</a></li>
+                                            <li><a href="#">Crime</a></li>
+                                            <li><a href="#">Sci-Fi</a></li>
+                                            <li><a href="#">Horror</a></li>
+                                            <li><a href="#">Romance</a></li>
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Adventure</a></li>
+                                            <li><a href="#">All Generes</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Type</li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Movie</a></li>
+                                            <li><a href="#">Series</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-header">Year</li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Search by Year</a></li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="form-group">
+                                    <input type="text" class="form-control" id="search" placeholder="Search">
+                                    <button type="button" class="btn btn-default" aria-label="Left Align">
+                                        <span class="glyphicon glyphicon-search play" aria-hidden="true"></span>
+                                    </button>
+                                </fieldset>
+                            </form>
+                   <!-- </div>-->
+
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label class="control-label flixlabel"> &nbsp;| Sort &nbsp;&nbsp;</label>
+                        </div>
+                        <label class="radio-inline flixlabel"><input type="radio" name="sortorder" checked>Ascending</label>
+                        <label class="radio-inline flixlabel"><input type="radio" name="sortorder">Descending</label>
+                        <div class="form-group">
+                            <label class="control-label flixlabel"> &nbsp;&nbsp; | Sort by  </label>
+                        </div>
+                        <label class="radio-inline flixlabel"><input type="radio" name="sortoption" checked>IMDB Ratings</label>
+                        <label class="radio-inline flixlabel"><input type="radio" name="sortoption">IMDB Votes</label>
+                        <label class="radio-inline flixlabel"><input type="radio" name="sortoption">Year</label>
+                        <label class="control-label flixlabel"> &nbsp;&nbsp; |</label>
+                    </form>
+
+                    <div class="pages" align="right">
+
+                        <ul class="pagination pagination-sm">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="col-sm-12">
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTU4MDU3NDQ5Ml5BMl5BanBnXkFtZTgwOTU5MDUxNTE@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch Avengers: Age of Ultron</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch The Avengers</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch The Shawshank Redemption</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jp">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch Batman Begins</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch The Dark Knight</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch The Dark Knight Rises</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMjU4NDExNDM1NF5BMl5BanBnXkFtZTgwMDIyMTgxNzE@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch The Revenant</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch Star Wars: The Force Awakens</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch The Martian</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTAzZmJiOGQtOWM3NS00MDEwLWJiNGEtN2QzMDM3NDJjMWQwXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch Airlift</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTUyMTE0ODcxNF5BMl5BanBnXkFtZTgwODE4NDQzNTE@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch Mad Max: Fury Road</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMjM2Nzg4MzkwOF5BMl5BanBnXkFtZTgwNzA0OTE3NjE@._V1_SX300.jpg">
+                            &nbsp;&nbsp;&nbsp;
+                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                            <a href="#" class="flixlabel">Watch Spectre</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+</body>
+</html>
