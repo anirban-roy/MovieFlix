@@ -6,4 +6,9 @@ $(document).ready(function() {
         //alert("hi");
         document.location.href = "signup.html";
     });
+	
+	$('#login').click(function () {
+        //alert("hi");
+        document.location.href = "catalog.html";
+    });
 })

@@ -135,7 +135,6 @@ hr{
 .poster:hover{
     border-radius: 35px;
     border-color: #ff5d73;
-    border-style: double;
 }
 li>a:hover{
     font-weight: bolder;
