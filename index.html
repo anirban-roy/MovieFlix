@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Anirban Roy">
+
+    <title>Movieflix: Free Netflix!</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="flix.js"></script>
+    <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body>
+            <div class="container-fluid">
+                <nav class="navbar navbar-dark bg-inverse">
+                    <a class="navbar-brand flixbrand" href="#">Movie Flix</a>
+                    <div class="flixnavigation">
+                        <ul class="nav navbar-nav ">
+                            <li class="nav-link">
+
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <section>
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <form class="loginform">
+                            <p> Login to explore latest movies and series at Movie Flix</p>
+                            <fieldset class="form-group">
+                               <!-- <label for="userid">Email address</label>-->
+                                <input type="email" class="form-control" id="userid" placeholder="Enter email">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <!--<label for="password">Password</label>-->
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </fieldset>
+                            <div align="center">
+                                <button id="login" type="button" class="btn">Login</button>
+                                <button id="signup" type="button" class="btn">Join Movieflix</button>
+                            </div>
+                        </form>
+                        <p id="message"></p>
+                    </div>
+                    <!--<button class="btn btn-danger" type="submit">Sign in</button>-->
+                </section>
+
+            </div>
+</body>
+</html>
