@@ -9,6 +9,6 @@ $(document).ready(function() {
 	
 	$('#login').click(function () {
         //alert("hi");
-        document.location.href = "catalog.html";
+        //document.location.href = "catalog.html";
     });
 })

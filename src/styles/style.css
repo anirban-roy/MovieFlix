@@ -151,3 +151,9 @@ li>a:hover{
     font-size: smaller;
     font-weight: bold;
 }
+
+.message{
+    color: #34003E;
+    font-size: large;
+    font-weight: bold;
+}
