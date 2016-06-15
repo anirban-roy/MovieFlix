@@ -18,18 +18,17 @@
         };
         loginVm.message='';
         loginVm.validateUser = validateUser;
-        
+
         function validateUser(){
             $http({
                 method : "GET",
                 url : "http://localhost:8080/MovieService/validateUser?loginid="+loginVm.user.email+"&passwd="+loginVm.user.password
             }).then(function success(response) {
-                //$scope.myWelcome = response.data;
-                if(response.data == 'valid') {
+                if(response.data.user.valid == 'valid') {
                     // create a cookie to contain auth token for later user transactions validations
                     var userAuth = {
-                        userid: response.data.userid,
-                        authtoken: response.data.authtoken
+                        userid: response.data.user.userid,
+                        authtoken: response.data.user.authtoken
                     }
                     $cookies.put('userAuthorization', userAuth);
                     // redirect to login home
