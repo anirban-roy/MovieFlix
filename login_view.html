@@ -1,0 +1,24 @@
+<!-- Login template -->
+    <section ng-controller="LoginController as loginVm">
+                    <div class="col-sm-offset-2 col-sm-6">
+                        <form class="loginform" ng-fo>
+                            <p> Login to explore latest movies and series at Movie Flix</p>
+                            <fieldset class="form-group">
+                                <!-- <label for="userid">Email address</label>-->
+                                <input ng-model="loginVm.user.email" type="text" required class="form-control" id="userid" placeholder="Enter email">
+                            </fieldset>
+                            <fieldset class="form-group">
+                                <!--<label for="password">Password</label>-->
+                                <input ng-model="loginVm.user.password" type="password" required class="form-control" id="password" placeholder="Password">
+                            </fieldset>
+                            <div align="center">
+                                <button type="button" class="btn btn-primary signupbtn" ng-click="loginVm.validateUser()">Login</button>
+                                <button type="button" class="btn btn-primary signupbtn" ng-click="loginVm.loadSignup()">Join Movieflix</button>
+                            </div>
+                            <div align="center">
+                                <p class="message">{{loginVm.message}}</p>
+                            </div>
+                        </form>
+
+                    </div>
+    </section>

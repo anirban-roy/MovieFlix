@@ -4,11 +4,11 @@
 $(document).ready(function() {
     $('#signup').click(function () {
         //alert("hi");
-        document.location.href = "signup.html";
+        //document.location.href = "signup_view.html";
     });
 	
 	$('#login').click(function () {
         //alert("hi");
-        document.location.href = "catalog.html";
+        //document.location.href = "catalog.html";
     });
 })

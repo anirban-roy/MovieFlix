@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='catalogapp'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Anirban Roy">
     <title>Movieflix: Free Netflix!</title>
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="flix.js"></script>
-    <link type="text/css" href="style.css" rel="stylesheet">
 </head>
 <body>
             <div class="container-fluid">
@@ -92,93 +87,29 @@
                         </ul>
                     </div>
                     <hr>
-                    <div class="col-sm-12">
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTU4MDU3NDQ5Ml5BMl5BanBnXkFtZTgwOTU5MDUxNTE@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch Avengers: Age of Ultron</a>
-                        </div>
+                    <div ng-controller="CatalogController as catalogVm">
 
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch The Avengers</a>
-                        </div>
+                        <div class="col-sm-12">
+                            <div align="center"><p class="catalogmessage">{{catalogVm.message}}</p></div>
 
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch The Shawshank Redemption</a>
+                            <div class="col-sm-2" ng-repeat = "movie in catalogVm.movies.values">
+                                <img class="poster" ng-src="{{movie.Poster}}">
+                                &nbsp;&nbsp;&nbsp;
+                                <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
+                                <a href="#" class="flixlabel">{{movie.Title}}</a>
+                            </div>
                         </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jp">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch Batman Begins</a>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch The Dark Knight</a>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch The Dark Knight Rises</a>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMjU4NDExNDM1NF5BMl5BanBnXkFtZTgwMDIyMTgxNzE@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch The Revenant</a>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch Star Wars: The Force Awakens</a>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch The Martian</a>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTAzZmJiOGQtOWM3NS00MDEwLWJiNGEtN2QzMDM3NDJjMWQwXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch Airlift</a>
-                        </div>
-
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMTUyMTE0ODcxNF5BMl5BanBnXkFtZTgwODE4NDQzNTE@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch Mad Max: Fury Road</a>
-                        </div>
-                        <div class="col-sm-2">
-                            <img class="poster" src="http://ia.media-imdb.com/images/M/MV5BMjM2Nzg4MzkwOF5BMl5BanBnXkFtZTgwNzA0OTE3NjE@._V1_SX300.jpg">
-                            &nbsp;&nbsp;&nbsp;
-                            <span class="glyphicon glyphicon-facetime-video play" aria-hidden="true"></span>
-                            <a href="#" class="flixlabel">Watch Spectre</a>
-                        </div>
-
                     </div>
 
                 </div>
             </div>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-cookies.js"></script>
+    <script src="src/javascript/catalog.controller.js"></script>
+    <link type="text/css" href="src/styles/style.css" rel="stylesheet">
 </body>
 </html>
