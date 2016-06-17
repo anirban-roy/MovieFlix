@@ -107,7 +107,7 @@ label, p{
     border-radius: 25px;
 }
 
-#genere, #login, #signup, #register{
+#genere, .signupbtn{
     background-color: #34003E;
     color: white;
 }

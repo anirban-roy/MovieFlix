@@ -1,0 +1,30 @@
+<!-- Signup template -->
+
+    <section ng-controller="SignupController as signupVm">
+        <div class="col-sm-offset-2 col-sm-6 mydiv" >
+            <form class="signupform">
+                <p> Register with Movief Flix and enjoy the latest movies and series</p>
+                <fieldset class="form-group">
+                   <input type="text" ng-model="signupVm.user.email" required class="form-control" id="userid" placeholder="Enter email">
+                </fieldset>
+                <fieldset class="form-group">
+                    <input type="text" ng-model="signupVm.user.name" required class="form-control" id="name" placeholder="Name">
+                </fieldset>
+                <fieldset class="form-group">
+                    <!--<label for="password">Password</label>-->
+                    <input type="password" ng-model="signupVm.user.password1" required class="form-control" id="password1" placeholder="Password">
+                </fieldset>
+                <fieldset class="form-group">
+                    <!--<label for="password">Password</label>-->
+                    <input type="password" ng-model="signupVm.user.password2" required class="form-control" id="password2" placeholder="Confirm Password">
+                </fieldset>
+                <div align="center">
+                    <button ng-click="signupVm.registerUser()" type="submit" class="btn btn-success signupbtn">Register</button>
+                    <button ng-click="signupVm.backToLogin()" type="submit" class="btn btn-danger signupbtn">Cancel</button>
+                </div>
+                <div align="center">
+                    <p class="message">{{signupVm.message}}</p>
+                </div>
+            </form>
+        </div>
+    </section>
