@@ -107,7 +107,7 @@ label, p{
     border-radius: 25px;
 }
 
-#genere, #login, #signup, #register{
+#genere, .signupbtn{
     background-color: #34003E;
     color: white;
 }
@@ -149,5 +149,16 @@ li>a:hover{
 .flixlabel{
     color: #34003E;
     font-size: smaller;
+    font-weight: bold;
+}
+
+.message{
+     color: white;
+     font-size: medium;
+     font-weight: bold;
+ }
+.catalogmessage{
+    color: #34003E;
+    font-size: medium;
     font-weight: bold;
 }
