@@ -1,16 +1,13 @@
 # MovieFlix
-# =========
 Personalized Netflix web application
 
 # Backend
-# =======
 The backend is a RESTFull API developed using Java Spring frameworks. It supports retrieval of titles, creation of titles, updation of titles and deletion of a title.
 The backend connects to a Mysql based database. The schema can be created using the given script in the DB_Schema_Scripts directory. Execute the queries in the script to create the schema
 and then run the backend API to interact with it. The backend has to be configured with the DB server properties for it to be able to connect with it. The data base is normalized based on 
 IMDB json data and allows storing the information in the JSON.
 
 # Sample JSON (Create Title)
-# ==========================
   {
     "Title": "Batman Begins",
     "Year": "2005",
