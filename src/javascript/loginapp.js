@@ -10,12 +10,12 @@
 
         $routeProvider
             .when('/',{
-                templateUrl: 'login_view.html',
+                templateUrl: 'src/views/login_view.html',
                 controller: 'LoginController',
                 controllerAs: 'loginVm'
         })
             .when('/signup',{
-                templateUrl: 'signup_view.html',
+                templateUrl: 'src/views/signup_view.html',
                 controller: 'SignupController',
                 controllerAs: 'signupVm'
             })
